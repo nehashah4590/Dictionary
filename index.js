@@ -11,7 +11,7 @@ const btns = document.querySelector(".btn")
     let val = document.querySelector('#myText').value;
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${val}`)
 	.then(response => response.json())
-    .then(response => phoneTs.textContent = response[0].phonetics[2].text)
+    .then(response => phoneTs.textContent = response[0].phonetics[0].text)
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${val}`)
     .then(response => response.json())
 	.then(response => wordEL.textContent = response[0].meanings[0].definitions[0].definition)
